@@ -1,0 +1,17 @@
+ok so listen
+we are going to make a tree which is a set of branches
+each branch() has a set of 3 POINT. btw branch() method is like this: branch(Point prevPoint, Branch prevBranch)
+point is an array of x and y
+branch's POINT consist of one point for the __mainpoint__ which is the end point of previous branch. the other two are nodes for Right and 
+    left nodes. these nodes are null by default. we connect main node to these if they are not null. 
+    these nodes become full when we call a branch() method. in this method we make another branch and remember that when we do that 
+    we take length and angle of the previous branch that we just worked on. and then we make the **endpoints** exact location. 
+    like what i just said earlier, the **endpoint** is the new __mainpoint__. so we make new __mainpoint__ when we call branch(). 
+ok so i think you are curious about how the recursion happens. well when we make the branch type. if Rnode is null(which always is) we 
+    make the right branch which will take the Rnode. so we first make Rnode and we do it by taking __mainpoint__ and use angle and 
+    length to calculate where the node will be. which 
+i give you tree's root and the length of the body of tree
+you take it and add the length of the body to rootpoint.y
+which makes the main point of root branch. the root branch uses a different constructor which doesnt take Branch type. it makes the 
+first branch mainly with prevpoint. and btw the branch 
+i want a constructor that passes the current object 
