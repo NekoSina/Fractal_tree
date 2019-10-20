@@ -1,15 +1,6 @@
 #pragma once
 #include "Application.h"
-#include<iostream>
-#include"SDL.h"
-#include <math.h>    
-#include<string>
 
-#define PI 3.14159265
-
-float Radian(float degree){
-    return degree*PI/180;
-}
 class Branch{
     Point _MainNode;
     Point _EndNode;
@@ -18,6 +9,7 @@ class Branch{
     Branch * prevBranch = nullptr;// contains previous branch's data about if L and R branch are null or not
     float length;
     float Angle;
+    float Radian(float degree);
     public:
     Branch(Branch *prevBranch);// makes the next brach with prev endpoint and data from previous branch
     Branch(Point rootp, float angle, float len);// Branch() for root. 

@@ -8,9 +8,11 @@
             "args": [
                 "-g",
                 "${workspaceFolder}\\main.cpp",
-                "-o",
                 "-g",
                 "${workspaceFolder}\\Tree.cpp",
+                "-g",
+                "${workspaceFolder}\\Application.cpp",
+                "-o",
                 "${workspaceFolder}\\tree.exe",
                 "-I",
                 "${workspaceFolder}\\dependency\\include",

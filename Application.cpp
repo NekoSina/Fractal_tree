@@ -72,5 +72,9 @@ void Window::Present(){
 void Window::Clear(){
     SDL_RenderClear(m_Renderer);
 }
+//-------------------------------------------------------------------------------------->
+void Window::SetColor(int r, int g, int b, int a){
+    SDL_SetRenderDrawColor(m_Renderer, r, g, b, a);
+}
 //======================================================================================>
 
