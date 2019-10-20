@@ -1,0 +1,22 @@
+#include"Tree.h"
+int main(int argc, char* argv[]){
+    Window window;
+    // defining trees root
+    Point rootp(300, 500);
+    Branch *root_branch = new Branch(rootp, 90, 30);
+    
+    std::cout<<sizeof(root_branch);
+    while(window.isActive()){
+        //clear();
+        window.SetColor(94, 94, 94, 0);
+        window.Clear();
+        //draw();
+        root_branch->draw(window);
+        //Present();
+        window.Present();
+    }
+    return 0;
+}
+hi guys. 
+the code above is a tree that creates itself. now my problem with it is that when i make tree. everything is nullreference when
+i want to draw it. which results in a segmentation error. simply put, i dont have the data for the whole tree from root_branch.

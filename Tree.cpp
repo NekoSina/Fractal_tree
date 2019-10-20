@@ -25,13 +25,16 @@ Branch::Branch(Point endp, float angle, float len){
     //--------------------------------------------------------------------------------------------
 void Branch::draw(Window &graphic){
     graphic.SetColor(233, 242, 241, 0);
-    graphic.DrawLine(prevBranch->_MainNode, _MainNode);
-    RBranch->draw(graphic);
-    LBranch->draw(graphic);
+    if(ValidLen()){
+        graphic.DrawLine(prevBranch->_MainNode, _MainNode);
+        RBranch->draw(graphic);
+        LBranch->draw(graphic);
+    }
 }
 //--------------------------------------------------------------------------------------------
 bool Branch::ValidLen(){
     if (length > 1){
+        std::cout<<length<<std::endl;
         return true;
     }
     else{
